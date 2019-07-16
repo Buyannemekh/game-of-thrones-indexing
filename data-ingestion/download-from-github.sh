@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
-max=10
-for i in `seq 0 $max`
+max=44
+for i in `seq 11 $max`
 do
-    echo "$i"
+    export NAME="https://raw.githubusercontent.com/Samariya57/coding_challenges/master/data/indexing/"
+    echo $NAME"$i"
+    wget --directory-prefix=/home/ubuntu/data-game-of-thrones $NAME"$i" 
+    #curl "$p" | aws s3 cp - s3://wiki-current-part3/"$NAME";
+    #echo "$i"
 done
